@@ -46,7 +46,6 @@ export class UsersComponent implements OnInit {
     if (this.userForm.valid) {
       this._store.dispatch(new UserActions.CreateUser({ user: { ...this.userForm.value, friends: this.userForm.value.friends.split(',') } }));
       this.userForm.reset();
-      console.log(this.userForm.controls);
     }
   }
 }
